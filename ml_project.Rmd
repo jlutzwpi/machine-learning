@@ -1,7 +1,7 @@
 ---
 title: "Coursera Machine Learning Project"
 author: "Justin L"
-date: "Saturday, April 11, 2015"
+date: "Saturday, May 23, 2015"
 output: html_document
 ---
 
@@ -84,7 +84,7 @@ modelFit <- train(classe ~., data=training, trControl=fitControl,
 modelFit
 ```
 
-The resulting model was then used to test the sub-testing set derived from the training data.  The "out-of-sample" accuracy was still over 99%, which I felt was adequate enough to apply to the final test data.  While this out-of-sample is still within the training data set, the 95% confidence interval estimates that the out-of-sample error for the test set would still be over 99%.
+The resulting model was then used to test the sub-testing set derived from the training data.  The "out-of-sample" accuracy, which is 1 - accuracy, was approximately 0.06%, which I felt was adequate enough to apply to the final test data.
 
 ```{r, echo=TRUE}
 test.predict <- predict(modelFit, testing)
